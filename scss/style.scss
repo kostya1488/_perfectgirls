@@ -60,6 +60,15 @@ $screen_xl: 1200px;
         font-size: 18px;
         font-weight: 600;
         padding: 12px 24px;
+        position: relative;
+        z-index: 100;
+        box-shadow: 0px 5px 12px 4px #9be2a575;
+        transition: 300ms;
+        &:hover {
+            color: #000;
+            transform: translateY(4px);
+            box-shadow: 0px 2px 10px 0px #9be2a575;
+        }
     }
 }
 
@@ -73,6 +82,7 @@ section {
 .section_intro {
     padding-top: 50px;
     background: url(../assets/intro.jpg) no-repeat 0 0;
+    background-size: cover;
     min-height: 100vh;
     position: relative;
     &::before {
@@ -108,11 +118,11 @@ section {
                 justify-content: center;
                 background: linear-gradient(90deg, #9be2a5, #94dfd0);
                 border-radius: 50%;
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
                 transition: .3s;
                 img {
-                    width: 25px;
+                    width: 20px;
                 }
                 &:hover {
                     transform: translateY(-3px);
@@ -209,18 +219,8 @@ section {
             letter-spacing: 0.8px;
             transition: 500ms;
             .color_text {
-                color: #9be2a5;
-            }
-        }
-        .main_btn {
-            position: relative;
-            z-index: 100;
-            box-shadow: 0px 5px 12px 4px #9be2a575;
-            transition: 300ms;
-            &:hover {
-                color: #000;
-                transform: translateY(4px);
-                box-shadow: 0px 2px 10px 0px #9be2a575;
+                @include text_gradient();
+                font-weight: 700;
             }
         }
     }
@@ -253,13 +253,18 @@ section {
 // ======================== /section_intro
 // ------------------------ section_about
 .section_about {
-    background: url(../assets/about.jpg) no-repeat 100% 50%;
+    background: url(../assets/about.jpg) no-repeat 100% 65%;
     background-size: cover;
     // min-height: 100vh;
-    color: #fff;
+    color: #d4d4d4;
+    .title {
+        color: #fff;
+    }
     .subtitle {
-        font-weight: 600;
+        color: #fff;
+        font-weight: 700;
         font-size: 18px;
+        letter-spacing: .5px;
         // @include text_gradient;
     }
     .list_advantages {
