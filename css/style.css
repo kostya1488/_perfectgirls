@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Viga&display=swap");
+* {
+  box-sizing: border-box; }
+
+.body {
+  font-family: 'Source Sans Pro', sans-serif; }
+  .body a,
+  .body a:hover {
+    text-decoration: none;
+    color: #fff; }
+  .body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .body .title {
+    font-family: 'Viga', sans-serif; }
+  .body .main_btn {
+    display: inline-block;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #9be2a5, #94dfd0);
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 24px; }
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow-x: hidden; }
+
+.section_intro {
+  padding-top: 50px;
+  background: url(../assets/intro.jpg) no-repeat 0 0;
+  min-height: 100vh;
+  position: relative; }
+  .section_intro::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, #9be2a5, #94dfd0);
+    opacity: 0;
+    transition: .3s; }
+  .section_intro.active::after {
+    opacity: .1; }
+  .section_intro .header .messengers {
+    position: relative;
+    z-index: 100; }
+    .section_intro .header .messengers a + a {
+      margin-left: 15px; }
+    .section_intro .header .messengers .circle {
+      display: inline-flex;
+      justify-content: center;
+      background: linear-gradient(90deg, #9be2a5, #94dfd0);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px; }
+      .section_intro .header .messengers .circle img {
+        width: 25px; }
+  .section_intro .header .menu_button {
+    position: relative;
+    height: 28px;
+    width: 30px;
+    z-index: 100;
+    cursor: pointer; }
+    .section_intro .header .menu_button .but_item {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #9be2a5, #94dfd0);
+      transition: .3s; }
+    .section_intro .header .menu_button .b_top {
+      top: 4px; }
+    .section_intro .header .menu_button .b_mid {
+      top: 12px; }
+    .section_intro .header .menu_button .b_bot {
+      top: 20px; }
+    .section_intro .header .menu_button.active .b_top {
+      transform: rotate(45deg);
+      top: 12px; }
+    .section_intro .header .menu_button.active .b_mid {
+      transform: rotate(-45deg); }
+    .section_intro .header .menu_button.active .b_bot {
+      transform: rotate(45deg);
+      top: 12px; }
+  .section_intro .menu {
+    margin-top: 40%;
+    position: absolute;
+    z-index: 100; }
+    .section_intro .menu .menu_item {
+      transform: translateX(1000px);
+      transition: .3s; }
+    .section_intro .menu .menu_item1 {
+      transition-duration: 100ms; }
+    .section_intro .menu .menu_item2 {
+      transition-duration: 300ms; }
+    .section_intro .menu .menu_item3 {
+      transition-duration: 500ms; }
+    .section_intro .menu .menu_item4 {
+      transition-duration: 700ms; }
+    .section_intro .menu .menu_item5 {
+      transition-duration: 900ms; }
+    .section_intro .menu .menu_item6 {
+      transition-duration: 1100ms; }
+    .section_intro .menu .nav_link {
+      display: inline-block;
+      font-size: 60px;
+      font-weight: 600;
+      padding-left: 8px;
+      width: 400px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0);
+      transition: .5s; }
+      .section_intro .menu .nav_link:hover {
+        color: #9be2a5;
+        transform: translateX(-100px);
+        border-bottom: 2px solid #9be2a5; }
+    .section_intro .menu.active .menu_item {
+      transform: translateX(0); }
+  .section_intro .preview {
+    margin-top: 40%;
+    transition-duration: 400ms; }
+    .section_intro .preview .title {
+      color: #fff;
+      font-size: 90px; }
+    .section_intro .preview hr {
+      margin-left: 8px;
+      height: 3px;
+      width: 30%;
+      background: linear-gradient(90deg, #9be2a5, #94dfd0);
+      margin-top: 14;
+      margin-bottom: 38px; }
+    .section_intro .preview .text_description {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.8px; }
+      .section_intro .preview .text_description .color_text {
+        color: #9be2a5; }
+    .section_intro .preview .main_btn {
+      position: relative;
+      z-index: 100;
+      box-shadow: 0px 5px 12px 4px #9be2a575; }
+    .section_intro .preview.active {
+      transform: translateX(1000px); }

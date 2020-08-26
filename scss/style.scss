@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Viga&display=swap');
+// ---------------------------------------------------------- mixins
+// ========================================================== / mixins
+// ---------------------------------------------------------- variables
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1199px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+// ========================================================== / variables
+// ---------------------------------------------------------- commons
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Source Sans Pro', sans-serif;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .title {
+        font-family: 'Viga', sans-serif;
+    }
+    .main_btn {
+        display: inline-block;
+        border-radius: 25px;
+        background: linear-gradient(90deg, #9be2a5, #94dfd0);
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 24px;
+    }
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+
+// ------------------------ section_intro
+.section_intro {
+    padding-top: 50px;
+    background: url(../assets/intro.jpg) no-repeat 0 0;
+    min-height: 100vh;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(90deg, #9be2a5, #94dfd0);
+        opacity: 0;
+        transition: .3s;
+    }
+    &.active {
+        &::after {
+            opacity: .1;
+        }
+    }
+    .header {
+        .messengers {
+            position: relative;
+            z-index: 100;
+            a+a {
+                margin-left: 15px;
+            }
+            .circle {
+                display: inline-flex;
+                justify-content: center;
+                background: linear-gradient(90deg, #9be2a5, #94dfd0);
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                img {
+                    width: 25px;
+                }
+            }
+        }
+        .menu_button {
+            position: relative;
+            height: 28px;
+            width: 30px;
+            z-index: 100;
+            cursor: pointer;
+            .but_item {
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background: linear-gradient(90deg, #9be2a5, #94dfd0);
+                transition: .3s;
+            }
+            .b_top {
+                top: 4px;
+            }
+            .b_mid {
+                top: 12px;
+            }
+            .b_bot {
+                top: 20px;
+            }
+            &.active {
+                .b_top {
+                    transform: rotate(45deg);
+                    top: 12px;
+                }
+                .b_mid {
+                    transform: rotate(-45deg);
+                }
+                .b_bot {
+                    transform: rotate(45deg);
+                    top: 12px;
+                }
+            }
+        }
+    }
+    .menu {
+        margin-top: 40%;
+        position: absolute;
+        z-index: 100;
+        .menu_item {
+            transform: translateX(1000px);
+            transition: .3s;
+        }
+        .menu_item1 {
+            transition-duration: 100ms;
+        }
+        .menu_item2 {
+            transition-duration: 300ms;
+        }
+        .menu_item3 {
+            transition-duration: 500ms;
+        }
+        .menu_item4 {
+            transition-duration: 700ms;
+        }
+        .menu_item5 {
+            transition-duration: 900ms;
+        }
+        .menu_item6 {
+            transition-duration: 1100ms;
+        }
+        .nav_link {
+            display: inline-block;
+            font-size: 60px;
+            font-weight: 600;
+            padding-left: 8px;
+            width: 400px;
+            border-bottom: 2px solid rgba($color: #000000, $alpha: 0);
+            transition: .5s;
+            &:hover {
+                color: #9be2a5;
+                transform: translateX(-100px);
+                border-bottom: 2px solid #9be2a5;
+            }
+        }
+        &.active .menu_item {
+            transform: translateX(0);
+        }
+    }
+    .preview {
+        margin-top: 40%;
+        transition-duration: 400ms;
+        .title {
+            // text-align: center;
+            color: #fff;
+            font-size: 90px;
+        }
+        hr {
+            margin-left: 8px;
+            height: 3px;
+            width: 30%;
+            background: linear-gradient(90deg, #9be2a5, #94dfd0);
+            margin-top: 14;
+            margin-bottom: 38px;
+        }
+        .text_description {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            // padding-left: 8px;
+            letter-spacing: 0.8px;
+            .color_text {
+                color: #9be2a5;
+            }
+        }
+        .main_btn {
+            position: relative;
+            z-index: 100;
+            box-shadow: 0px 5px 12px 4px #9be2a575;
+        }
+        &.active {
+            transform: translateX(1000px);
+        }
+    }
+}
+
+// ======================== /section_intro
+// ------------------------ section_about
+.section_about {}
+
+// ======================== /section_about
+// ------------------------ section_vacancies
+.section_vacancies {}
+
+// ======================== /section_vacancies
+// ------------------------ section_promo
+.section_promo {}
+
+// ======================== /section_promo
+// ------------------------ section_contacts
+.section_contacts {}
+
+// ======================== /section_contacts
+// ------------------------ section_anketa
+.section_anketa {}
+
+// ======================== /section_anketa
+// ------------------------ section_faq
+.section_faq {}
+
+// ======================== /section_faq
+// ------------------------ section_footer
+.section_footer {}
+
+// ======================== /section_footer
