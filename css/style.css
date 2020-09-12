@@ -27,27 +27,65 @@
       left: 0;
       bottom: 0;
       background: linear-gradient(90deg, #9be2a5, #94dfd0); }
+    .body .title.title_center::after {
+      left: 30%; }
+  .body .subtitle {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: .5px; }
   .body .main_btn {
     display: inline-block;
     border-radius: 25px;
-    background: linear-gradient(90deg, #9be2a5, #94dfd0);
-    color: #000;
     font-size: 18px;
     font-weight: 600;
     padding: 12px 24px;
     position: relative;
     z-index: 100;
-    box-shadow: 0px 5px 12px 4px #9be2a575;
-    transition: 300ms; }
+    transition: 300ms;
+    cursor: pointer; }
     .body .main_btn:hover {
+      transform: translateY(4px); }
+    .body .main_btn__dark {
+      background: linear-gradient(90deg, #585858, #323435); }
+    .body .main_btn__color {
+      background: linear-gradient(90deg, #9be2a5, #94dfd0);
       color: #000;
-      transform: translateY(4px);
-      box-shadow: 0px 2px 10px 0px #9be2a575; }
+      box-shadow: 0px 5px 12px 4px #9be2a575; }
+      .body .main_btn__color:hover {
+        color: #000;
+        box-shadow: 0px 2px 10px 0px #9be2a575; }
+  .body .messengers {
+    position: relative;
+    z-index: 100; }
+    .body .messengers a + a {
+      margin-left: 15px; }
+    .body .messengers .circle {
+      display: inline-flex;
+      justify-content: center;
+      background: linear-gradient(90deg, #9be2a5, #94dfd0);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      transition: .3s; }
+      .body .messengers .circle img {
+        width: 20px; }
+      .body .messengers .circle:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 2px 10px 0px #9be2a575; }
 
 section {
   padding-top: 100px;
   padding-bottom: 100px;
   overflow-x: hidden; }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(10px); }
+  100% {
+    transform: translateY(0px); } }
 
 .section_intro {
   padding-top: 50px;
@@ -74,30 +112,13 @@ section {
     background: linear-gradient(90deg, #9be2a5, #94dfd0);
     opacity: 0;
     transition: .3s; }
-  .section_intro .header .messengers {
-    position: relative;
-    z-index: 100; }
-    .section_intro .header .messengers a + a {
-      margin-left: 15px; }
-    .section_intro .header .messengers .circle {
-      display: inline-flex;
-      justify-content: center;
-      background: linear-gradient(90deg, #9be2a5, #94dfd0);
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      transition: .3s; }
-      .section_intro .header .messengers .circle img {
-        width: 20px; }
-      .section_intro .header .messengers .circle:hover {
-        transform: translateY(-3px);
-        box-shadow: 0px 2px 10px 0px #9be2a575; }
   .section_intro .header .menu_button {
     position: relative;
     height: 28px;
     width: 30px;
     z-index: 100;
-    cursor: pointer; }
+    cursor: pointer;
+    animation: bounce 3s ease-in-out infinite; }
     .section_intro .header .menu_button .but_item {
       position: absolute;
       width: 100%;
@@ -188,14 +209,130 @@ section {
   color: #d4d4d4; }
   .section_about .title {
     color: #fff; }
-  .section_about .subtitle {
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: .5px; }
   .section_about .list_advantages .num {
     background: -webkit-linear-gradient(0deg, #9be2a5, #94dfd0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 42px;
     font-weight: 600; }
+
+.section_vacancies {
+  position: relative;
+  min-height: 700px;
+  background: #000; }
+  .section_vacancies .title {
+    color: #fff; }
+  .section_vacancies ._mass .vacancy_button {
+    box-shadow: 0px 5px 12px 4px #d26d88; }
+    .section_vacancies ._mass .vacancy_button:hover {
+      box-shadow: 0px 2px 10px 0px #d26d88; }
+  .section_vacancies ._model .vacancy_button {
+    box-shadow: 0px 5px 12px 4px #25557c; }
+    .section_vacancies ._model .vacancy_button:hover {
+      box-shadow: 0px 2px 10px 0px #25557c; }
+  .section_vacancies .vacancy_item {
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s; }
+    .section_vacancies .vacancy_item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .section_vacancies .vacancy_item .text_box {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 60%;
+      left: 35px;
+      z-index: 2;
+      color: #fff;
+      transition: 500ms; }
+    .section_vacancies .vacancy_item .vacancy_button {
+      position: absolute;
+      bottom: 184px;
+      transition: 500ms;
+      width: 140px;
+      text-align: center; }
+    .section_vacancies .vacancy_item .vacancy_title {
+      margin-top: 30px;
+      font-size: 28px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 560;
+      transition-duration: 600ms; }
+    .section_vacancies .vacancy_item .vacancy_subtitle {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      transition-duration: 600ms; }
+    .section_vacancies .vacancy_item .vacancy_description {
+      position: absolute;
+      top: 30px;
+      transform: translateY(300px);
+      opacity: 0;
+      visibility: hidden;
+      transition-duration: 600ms; }
+    .section_vacancies .vacancy_item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.146096) 0%, rgba(0, 0, 0, 0.417805) 13%, rgba(0, 0, 0, 0.669905) 52%, black 100%);
+      width: 100%;
+      height: 100%;
+      margin-left: 15px;
+      margin-right: 15px;
+      visibility: hidden;
+      opacity: 0;
+      transition: .5s; }
+  .section_vacancies .card_active::before {
+    visibility: visible;
+    opacity: 1; }
+  .section_vacancies .card_active .vacancy_title {
+    transform: translateY(-300px);
+    opacity: 0;
+    visibility: hidden; }
+  .section_vacancies .card_active .vacancy_subtitle {
+    transform: translateY(-300px);
+    opacity: 0;
+    visibility: hidden; }
+  .section_vacancies .card_active .vacancy_description {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible; }
+    .section_vacancies .card_active .vacancy_description .list_title {
+      background: -webkit-linear-gradient(0deg, #9be2a5, #94dfd0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 28px;
+      font-weight: 500; }
+    .section_vacancies .card_active .vacancy_description ul {
+      list-style: circle;
+      margin-top: 10px;
+      margin-left: 20px; }
+  .section_vacancies .card_active .vacancy_button {
+    position: absolute;
+    bottom: 20px; }
+
+.section_contacts .contacts_title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #323435; }
+
+.section_contacts .subtitle {
+  color: #323435; }
+
+.section_contacts a {
+  font-size: 20px;
+  color: #707070; }
+  .section_contacts a:hover {
+    color: #707070; }
+
+.section_contacts .messengers .circle {
+  width: 40px;
+  height: 40px; }
+  .section_contacts .messengers .circle img {
+    width: 16px; }
