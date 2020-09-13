@@ -22,13 +22,14 @@
     .body .title::after {
       content: "";
       position: absolute;
-      width: 40%;
+      width: 120px;
       height: 3px;
       left: 0;
       bottom: 0;
       background: linear-gradient(90deg, #9be2a5, #94dfd0); }
     .body .title.title_center::after {
-      left: 30%; }
+      left: 50%;
+      margin-left: -60px; }
   .body .subtitle {
     color: #fff;
     font-weight: 700;
@@ -219,17 +220,18 @@ section {
 .section_vacancies {
   position: relative;
   min-height: 700px;
-  background: #000; }
+  background: #000;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
   .section_vacancies .title {
     color: #fff; }
   .section_vacancies ._mass .vacancy_button {
-    box-shadow: 0px 5px 12px 4px #d26d88; }
+    box-shadow: 0px 5px 12px 4px #883c51; }
     .section_vacancies ._mass .vacancy_button:hover {
-      box-shadow: 0px 2px 10px 0px #d26d88; }
+      box-shadow: 0px 2px 10px 0px #883c51; }
   .section_vacancies ._model .vacancy_button {
-    box-shadow: 0px 5px 12px 4px #25557c; }
+    box-shadow: 0px 5px 12px 4px #042747; }
     .section_vacancies ._model .vacancy_button:hover {
-      box-shadow: 0px 2px 10px 0px #25557c; }
+      box-shadow: 0px 2px 10px 0px #042747; }
   .section_vacancies .vacancy_item {
     height: 430px;
     position: relative;
@@ -268,10 +270,20 @@ section {
     .section_vacancies .vacancy_item .vacancy_description {
       position: absolute;
       top: 30px;
-      transform: translateY(300px);
       opacity: 0;
       visibility: hidden;
       transition-duration: 600ms; }
+      .section_vacancies .vacancy_item .vacancy_description .list_body {
+        transform: translateY(300px);
+        top: -300px;
+        transition-duration: 600ms;
+        list-style: circle;
+        margin-top: 10px;
+        margin-left: 20px; }
+      .section_vacancies .vacancy_item .vacancy_description .list_title {
+        transform: translateX(300px);
+        left: 300px;
+        transition-duration: 600ms; }
     .section_vacancies .vacancy_item::before {
       content: "";
       position: absolute;
@@ -298,20 +310,18 @@ section {
     opacity: 0;
     visibility: hidden; }
   .section_vacancies .card_active .vacancy_description {
-    transform: translateY(0);
     opacity: 1;
     visibility: visible; }
+    .section_vacancies .card_active .vacancy_description .list_body {
+      transform: translateY(0); }
     .section_vacancies .card_active .vacancy_description .list_title {
+      transform: translateX(0);
       background: -webkit-linear-gradient(0deg, #9be2a5, #94dfd0);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-family: 'Ubuntu', sans-serif;
       font-size: 28px;
       font-weight: 500; }
-    .section_vacancies .card_active .vacancy_description ul {
-      list-style: circle;
-      margin-top: 10px;
-      margin-left: 20px; }
   .section_vacancies .card_active .vacancy_button {
     position: absolute;
     bottom: 20px; }
@@ -336,3 +346,66 @@ section {
   height: 40px; }
   .section_contacts .messengers .circle img {
     width: 16px; }
+
+.section_contacts .image_wrap {
+  position: relative;
+  overflow: hidden;
+  padding: 0; }
+  .section_contacts .image_wrap img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.section_anketa {
+  background: url(../assets/anketa.jpg) no-repeat;
+  background-size: cover;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+  .section_anketa .title {
+    color: #fff; }
+  .section_anketa input {
+    background-color: rgba(0, 0, 0, 0.47);
+    color: #fff;
+    padding: 18px 49px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none; }
+  .section_anketa button {
+    border: none;
+    min-width: 200px; }
+
+.section_faq {
+  background: #f0f0f0; }
+  .section_faq .accordion_item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 20px 0; }
+    .section_faq .accordion_item__head {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .section_faq .accordion_item__head .accordion_header_text {
+        font-size: 24px;
+        font-weight: 600; }
+      .section_faq .accordion_item__head.collapsed .vertical_line {
+        transform: scaleY(1); }
+    .section_faq .accordion_item .accordion_body_text {
+      color: #707070; }
+  .section_faq .toggle_icon {
+    position: relative;
+    width: 14px;
+    height: 14px; }
+    .section_faq .toggle_icon .horizontal_line {
+      position: absolute;
+      background: #323435;
+      top: 6px;
+      height: 2px;
+      width: 100%; }
+    .section_faq .toggle_icon .vertical_line {
+      position: absolute;
+      background: #323435;
+      left: 6px;
+      width: 2px;
+      height: 100%;
+      transform: scaleY(0);
+      transition: .3s; }
