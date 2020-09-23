@@ -137,7 +137,7 @@ section {
     position: absolute;
     z-index: 100; }
     .section_intro .menu .menu_item {
-      transform: translateX(1000px);
+      transform: translateX(60vw);
       transition: .3s; }
     .section_intro .menu .menu_item1 {
       transition-duration: 100ms; }
@@ -202,7 +202,7 @@ section {
   .section_intro.menu_open .menu_item {
     transform: translateX(0); }
   .section_intro.menu_open .preview_item {
-    transform: translateX(1000px); }
+    transform: translateX(60vw); }
 
 .section_about {
   background: url(../assets/about.jpg) no-repeat 100% 65%;

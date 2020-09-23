@@ -216,7 +216,7 @@ section {
         position: absolute;
         z-index: 100;
         .menu_item {
-            transform: translateX(1000px);
+            transform: translateX(60vw);
             transition: .3s;
         }
         .menu_item1 {
@@ -302,7 +302,7 @@ section {
             transform: translateX(0);
         }
         .preview_item {
-            transform: translateX(1000px);
+            transform: translateX(60vw);
         }
     }
 }
